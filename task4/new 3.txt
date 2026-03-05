@@ -1,0 +1,10 @@
+class UserProfile{
+	
+	public static void main (String []args)
+	{
+		int age=40;
+		int age=78;
+	System.out.print("The age is":+age);
+	
+	}
+	}
