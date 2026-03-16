@@ -1,5 +1,0 @@
-class CountryExecutor {
-    public static void main(String[] args) {
-        Country.run();
-    }
-}
