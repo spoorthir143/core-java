@@ -1,0 +1,224 @@
+1)explin constructor chaining using this()with example?
+
+constructor chaining means clalling one constructor from another constructor
+constructor in same class using class using this keyword this().
+to reUse the code 
+Avoid the duplication and clean and simple
+example=>
+class Fan{
+	int fanNumber;
+	String fanName;
+	String companyName;
+	
+	Capacitor capacitor;
+	
+	public void getFanDetails(){
+	
+	System.out.println("inside the FanDetails");
+	
+	System.out.println("The fan number is:"+fanNumber);
+	System.out.println("the name :"+fanName);
+	System.out.println("Company Name is:"+companyName);
+	
+	this.Capacitor.getCapacitorDetails();
+	}
+}
+	 
+
+
+2)Explain default values assign to instantce variable in java with example?
+
+in java when we create instance variable inside a class but outside method,java automatically
+assign them default values if we dont initialize them.
+example-->
+BYTE=0
+SHORT=0
+INT=0
+LONG=0
+FLOAT=0.0F
+DOUBLE=0.0D
+CHARACTER=NULL
+BOOLEAN=FALSE
+OBJECT REFERENCE=NULL
+Thease are automatically assign by JVM
+applies only instance variable and local variable(do not get a default values).
+
+3)write a java program to perform CURD operation on an array?
+Create
+read/display
+update
+delete
+
+class Olympic
+{
+	String sportsNames[] = new String[11];
+	int index;
+	
+	public boolean addsportsNames(String sportsName)
+	{
+		boolean isAddedSportsNames = false;
+		if(sportsName != null && !sportsName.isEmpty())
+		{
+			sportsNames[index++] = sportsName;
+			isAddedsportsNames = true;
+		}
+		else
+			
+			System.out.println(sportsName +"is not valid");
+		return isAddedsportsNames;
+	}
+	
+	public void getsportsNames()
+	{
+		System.out.println("Sports are registered in Olympic are...");
+		for(String names : sportsNames)
+		System.out.println(names);
+	}
+	
+	public String getSportByName(String sportName)
+	{
+		String name=null;
+		for(String sport:sportsNames)
+		{
+			if(sport==sportName)
+			{
+				name=sport;
+				break;
+			}
+		}
+		if(name==null)
+			System.out.println(sportName+" not found");
+		
+		return name;
+	}
+	
+	
+	public boolean updateSport(String existingSport,String updatedSport)
+	{
+		boolean isUpdated=false;
+		
+		for(int index=0;index<sportsNames.length;index++)
+		{
+			if(sportsNames[index]==existingSport)
+			{
+				sportsNames[index]=updatedSport;
+				isUpdated=true;
+			}
+		}
+		
+		if(isUpdated==false)
+			System.out.println(existingSport+" is not found");
+		
+		return isUpdated;
+	}
+	
+	
+	public boolean deleteSport(String deleteSport)
+	{
+		boolean isDeleted=false;
+		
+		for(int index=0;index<sportsNames.length;index++)
+		{
+			if(sportsNames[index]==deleteSport)
+			{
+				sportsNames[index]=null;
+				isDeleted=true;
+			}
+		}
+		
+		if(isDeleted==false)
+			System.out.println(deleteSport+" not found");
+		
+		return isDeleted;
+	}
+	
+}
+
+
+4) write a program to demonstrate a default constructor?
+class Student{
+	
+	int id;
+	String name;
+	Student () {
+			id=102;
+			name="spoorthi";
+		   }
+	void display(){
+	System.out.printlnn("ID:"+id);
+	System.out.println("name:"+name);
+       }
+public satic void main(String[] i){
+	Student s1=new student();
+	s1.display();
+	}
+} 
+
+5)Write a java program using parameterized constructor?
+class Employee {
+
+    int id;
+    String name;
+    double salary;
+
+    Employee(int i, String n, double s) {
+        id = i;
+        name = n;
+        salary = s;
+    }
+
+    void display() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Salary: " + salary);
+       
+    }
+
+    public static void main(String[] args) {
+        Employee e1 = new Employee(1, "Spoorthi", 25000);
+        Employee e2 = new Employee(2, "Rahul", 30000);
+
+        e1.display();
+        e2.display();
+    }
+}
+
+
+
+6)what is constructor in java?who provide a default constructor?
+
+Constructor is a special method in java, as same name as a class and 
+automatically cll when object is created
+it used to initialized variable.
+
+JVM provide a default constructor automatically.
+
+
+7)can a constructor have a return type?why?
+No It Don't have any return type.
+becz it's a function not a method.
+
+
+8)give a real-world example has
+has a relation means one object caontrain another object it is implemented using composition or aggregation in java
+
+ex->car has a enginecar=main object
+engine has part of car
+
+Student has a address
+library has many books
+computor has a keyboard
+mobile has battery
+
+
+
+
+
+
+
+
+
+
+
+	
+		
